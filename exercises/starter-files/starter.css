@@ -1,0 +1,97 @@
+/* ===========================
+   STARTER CSS FILE
+   novice-dev-with-ai course
+   Fill in the blanks!
+   =========================== */
+
+/* === 1. RESET (Do not edit this section) === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === 2. CUSTOM PROPERTIES — define your colors and spacing here === */
+:root {
+  --color-primary:   /* your primary color */;
+  --color-text:      #1e293b;
+  --color-bg:        #ffffff;
+  --color-bg-alt:    #f8fafc;
+  --color-border:    #e2e8f0;
+
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+}
+
+/* === 3. BASE STYLES === */
+body {
+  font-family: /* your font, then fallback */;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === 4. TYPOGRAPHY === */
+h1 { font-size: /* choose */; font-weight: 700; }
+h2 { font-size: /* choose */; font-weight: 600; }
+h3 { font-size: /* choose */; font-weight: 600; }
+p  { margin-bottom: var(--space-md); }
+
+/* === 5. LAYOUT — .site-header === */
+.site-header {
+  /* Add your header styles */
+}
+
+/* === 6. LAYOUT — .site-main === */
+.site-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* === 7. SECTIONS === */
+.hero {
+  /* Add your hero section styles */
+}
+
+.about {
+  /* Add your about section styles */
+  margin-top: var(--space-xl);
+}
+
+.projects {
+  /* Add your projects section styles */
+  margin-top: var(--space-xl);
+}
+
+/* === 8. FOOTER === */
+.site-footer {
+  /* Add your footer styles */
+}
+
+/* === 9. RESPONSIVE === */
+@media (min-width: 768px) {
+  /* Add your tablet styles */
+}
+
+@media (min-width: 1024px) {
+  /* Add your desktop styles */
+}

@@ -1,0 +1,168 @@
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* === Variables === */
+:root {
+  --color-primary:  #2563eb;
+  --color-text:     #1e293b;
+  --color-muted:    #64748b;
+  --color-bg:       #f8fafc;
+  --color-surface:  #ffffff;
+  --color-border:   #e2e8f0;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+
+/* === Base === */
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* === Page Layout === */
+.page-header {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.page-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+
+.page-main { max-width: 900px; margin: 0 auto; padding: var(--space-xl); }
+
+.page-footer {
+  background: var(--color-text);
+  color: white;
+  text-align: center;
+  padding: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+/* === Demo Sections === */
+.demo-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.demo-section h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+
+.demo-note {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+}
+
+/* === DEMO 1: Navigation Bar === */
+/* KEY: display:flex on nav, space-between pushes children apart */
+.demo-nav {
+  display: flex;                    /* turns on flexbox */
+  justify-content: space-between;   /* brand left, links right */
+  align-items: center;              /* vertically center everything */
+  background: #1e293b;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 6px;
+}
+
+.nav-brand { color: white; font-weight: 700; }
+
+/* nav-links is ALSO a flex container — to put links in a row */
+.nav-links {
+  display: flex;        /* links in a row */
+  list-style: none;
+  gap: var(--space-lg); /* space between links */
+}
+
+.nav-links a { color: #94a3b8; text-decoration: none; }
+.nav-links a:hover { color: white; }
+
+/* === DEMO 2: Centered Hero === */
+/* KEY: column direction, center on both axes */
+.demo-hero {
+  display: flex;
+  flex-direction: column;   /* stack children vertically (main axis = vertical) */
+  justify-content: center;  /* center on main axis (vertical) */
+  align-items: center;      /* center on cross axis (horizontal) */
+  text-align: center;
+  gap: var(--space-md);
+  min-height: 200px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-radius: 8px;
+  padding: var(--space-xl);
+}
+
+.demo-button {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* === DEMO 3: Card Row === */
+/* KEY: flex-wrap so cards drop to a new row */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;       /* wrap to next line when needed */
+  gap: var(--space-lg);  /* gap between all cards */
+}
+
+.card {
+  flex: 1;              /* all cards grow equally */
+  min-width: 220px;     /* won't get smaller than this */
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-lg);
+}
+
+.card h3 { margin-bottom: 0.5rem; }
+
+/* === DEMO 4: justify-content comparison === */
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.jc-demo {
+  display: flex;          /* all four use flexbox */
+  background: #f1f5f9;
+  border: 2px dashed var(--color-border);
+  border-radius: 6px;
+  padding: var(--space-sm);
+  min-height: 60px;
+}
+
+.box {
+  width: 60px;
+  height: 48px;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* Only the justify-content changes per demo */
+.jc-start   { justify-content: flex-start;  }
+.jc-center  { justify-content: center;      }
+.jc-between { justify-content: space-between; }
+.jc-evenly  { justify-content: space-evenly; }

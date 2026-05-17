@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Demo — novice-dev-with-ai</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <header class="page-header">
+      <h1>Flexbox Reference Demo</h1>
+      <p>Inspect this page in DevTools to see how Flexbox works.</p>
+    </header>
+
+    <main class="page-main">
+
+      <!-- DEMO 1: Navigation bar pattern -->
+      <section class="demo-section">
+        <h2>Pattern 1 — Navigation Bar</h2>
+        <p class="demo-note">justify-content: space-between pushes brand left and links right.</p>
+        <nav class="demo-nav">
+          <span class="nav-brand">My Site</span>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- DEMO 2: Centered hero -->
+      <section class="demo-section">
+        <h2>Pattern 2 — Centered Hero</h2>
+        <p class="demo-note">flex-direction: column + justify-content: center + align-items: center</p>
+        <div class="demo-hero">
+          <h3>Hello, World!</h3>
+          <p>I am centered both ways using Flexbox.</p>
+          <a href="#" class="demo-button">Learn More</a>
+        </div>
+      </section>
+
+      <!-- DEMO 3: Card row -->
+      <section class="demo-section">
+        <h2>Pattern 3 — Card Row</h2>
+        <p class="demo-note">flex-wrap: wrap lets cards drop to a new row. Resize the window!</p>
+        <div class="card-row">
+          <article class="card">
+            <h3>Card One</h3>
+            <p>flex: 1 makes all cards grow equally to fill the row.</p>
+          </article>
+          <article class="card">
+            <h3>Card Two</h3>
+            <p>min-width: 220px prevents cards from getting too narrow.</p>
+          </article>
+          <article class="card">
+            <h3>Card Three</h3>
+            <p>gap: 1.5rem adds space without margin tricks.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- DEMO 4: justify-content values -->
+      <section class="demo-section">
+        <h2>Pattern 4 — justify-content Values</h2>
+        <p class="demo-note">All containers have the same 3 items. Only justify-content changes.</p>
+
+        <p class="label">flex-start (default)</p>
+        <div class="jc-demo jc-start">
+          <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+        </div>
+
+        <p class="label">center</p>
+        <div class="jc-demo jc-center">
+          <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+        </div>
+
+        <p class="label">space-between</p>
+        <div class="jc-demo jc-between">
+          <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+        </div>
+
+        <p class="label">space-evenly</p>
+        <div class="jc-demo jc-evenly">
+          <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <p>novice-dev-with-ai — Flexbox Reference Demo</p>
+    </footer>
+
+  </body>
+</html>
